@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title></title>
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="js/libs/jquery-ui-1.11.4/jquery-ui.min.css">
+<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div class="canvas canvas-working">
+			<img src="img/demo-small.jpg" alt="">
+		</div>
+		<div class="canvas canvas-original">
+			<img src="img/demo-small.jpg" alt="">
+		</div>
+		<div class="search">
+			<div class="bar"></div>
+			<div class="suggestions">
+				<!-- <p>Suggestions</p> -->
+			</div>
+		</div>
+		<div class="tools"></div>
+		<div class="controls"></div>
+
+
+		<script type="text/template" id="search-bar-view">
+			<input type="text" placeholder="What would you like to do?">
+			<button class="close">Clear</button>
+		</script>
+		<script type="text/template" id="workflow-search-results-view">
+			<ul class="workflow-search-results"></ul>
+		</script>
+		<script type="text/template" id="feature-search-results-view">
+			<ul class="feature-search-results"></ul>
+		</script>
+		<script type="text/template" id="feature-view">
+			<h3><%= name %></h3>
+			<p><%= desc %></p>
+		</script>
+		<script type="text/template" id="workflow-view">
+			<h3><%= instruction %></h3>
+			<p><strong><%= name %></strong>: <%= desc %></p>
+			<button class="grab-tools">Grab Tools</button>
+		</script>
+		<script type="text/template" id="grab-tools-view">
+			<ul></ul>
+		</script>
+		<script type="text/template" id="brightness-control-view">
+			<div class="control control-brightness">
+				<button class="close">Clear</button>
+				<h3>Brightness (<span>0</span>)</h3>
+				<div id="brightness-slider"></div>
+			</div>
+		</script>
+		<script type="text/template" id="contrast-control-view">
+			<div class="control control-contrast">
+				<button class="close">Clear</button>
+				<h3>Contrast (<span>0</span>)</h3>
+				<div id="contrast-slider"></div>
+			</div>
+		</script>
+
+
+		<script type="text/javascript" src="js/libs/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/libs/underscore-min.js"></script>
+		<script type="text/javascript" src="js/libs/backbone-min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/libs/caman.full.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>
